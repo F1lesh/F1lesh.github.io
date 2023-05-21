@@ -44,3 +44,15 @@ try{redirect_contacts.addEventListener('click', function(){
     console.log('go to contacts');
 })}
 catch (error) {}
+
+
+
+document.addEventListener('mousemove', function(e) {
+    let dx = e.pageX - window.innerWidth / 2
+    let dy = e.pageY - window.innerHeight / 2
+    let angleX = 180 * dx / window.innerWidth / 2
+    let angleY = 180 * dy / window.innerHeight / 2
+    redirect_python_btn.style.transform = `rotateX(${-angleY}deg) rotateY(${angleX}deg)`
+    redirect_JS_btn.style.transform = `rotateX(${-angleY}deg) rotateY(${angleX}deg)`
+    redirect_C_btn.style.transform = `rotateX(${-angleY}deg) rotateY(${angleX}deg)`
+})
